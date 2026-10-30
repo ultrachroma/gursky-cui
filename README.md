@@ -1,16 +1,16 @@
 # Panorama Cloud
 
-Original photographic panorama worker, ComfyUI editor graph client, and optional loopback app. This is a source-only release candidate, not an established working contest demo. Publication approval and copyright-owner assent remain pending. The root MIT license is unchanged.
+Original photographic panorama worker, ComfyUI editor graph client, and optional loopback app. Source is published at [ultrachroma/gursky-cui](https://github.com/ultrachroma/gursky-cui) under the root MIT license. A working cloud demo and verified contest submission remain pending.
 
 The OpenCV worker registers 2-6 overlapping photographs, refines cameras, applies spherical warping, exposure gains, seams and multiband blending, and writes panorama, geometric coverage and provenance. No generative fill, HDR, manual alignment or seam editing. Black image pixels can be valid; white coverage means covered.
 
 ## Evidence and limits
 
-Historical local validation recorded 14 processing/safety tests, synthetic geometry/exposure assessments and one public sample set. A managed Linux build imported the worker successfully. These results do not establish actual editor widgets, frontend rendering, tensor materialization, cloud original-asset binding, authenticated artifact publication or cloud stitching. The report fallback source and mock tests are included; independent review and live verification remain pending. No images, results, credentials, environments, operational account snapshots or Git history are included.
+Historical local validation recorded 14 processing/safety tests, synthetic geometry/exposure assessments and one public sample set. A managed Linux build imported the worker successfully. An isolated CPU editor loaded both blank graph sizes, rendered upload widgets and expanded output panels, and passed Save, reload and API Export checks; exported classes and inputs matched the authored API graphs. This does not establish tensor materialization, cloud original-asset binding, authenticated artifact retrieval, cloud stitching or actual result previews. No cloud panorama job or working demo has been verified. The report fallback source and mock tests are included. No images, results, credentials, environments, operational account snapshots or private Git history are included.
 
 ## Dependencies and setup
 
-Use Python 3.12 and separate isolated environments. This candidate has not completed a clean-machine install. The exact compatible isolated-editor ComfyUI/frontend/torch versions are still unpinned: setup below is a preparation recipe, not a tested complete runtime. See [third-party references](THIRD_PARTY_NOTICES.md). Obtain external host/dependencies directly from their upstream sources; none are vendored.
+Use Python 3.12 and separate isolated environments. This published setup recipe has not completed a clean-machine install. Its isolated-editor ComfyUI/frontend/torch versions remain unpinned: setup below is a preparation recipe, not a verified reproducible runtime. See [third-party references](THIRD_PARTY_NOTICES.md). Obtain external host/dependencies directly from their upstream sources; none are vendored.
 
 Worker dependencies, in a new worker-only environment:
 
@@ -29,7 +29,7 @@ The remote interlock `PANORAMA_GRAPH_ALLOW_REMOTE=approved` and graph toggle `al
 
 ## Workflows
 
-Open [workflows/panorama_editor.json](workflows/panorama_editor.json) in the isolated editor for two photos, or the six-photo variant. Original-byte loaders feed the cloud caller; panorama, white-valid coverage and report feed in-graph previews. Optional slots support 3-5 photos by duplicating loaders. The editor Save/API Export round trip and actual previews remain unverified.
+Open [workflows/panorama_editor.json](workflows/panorama_editor.json) in the isolated editor for two photos, or the six-photo variant. Original-byte loaders feed the cloud caller; panorama, white-valid coverage and report feed in-graph previews. Optional slots support 3-5 photos by duplicating loaders. Both blank templates passed editor Save, reload and API Export checks without execution. Actual cloud-result pixel previews remain unverified.
 
 `workflows/*_api.json` are client graphs for the editor. They must not be submitted directly to the managed worker. Root `workflow_api.json` is the worker graph (`PhotoPanorama`, node 1); the client constructs that worker request internally. Read [workflow contracts](workflows/README.md) and [client behavior](custom_nodes/panorama_graph_client/README.md).
 
