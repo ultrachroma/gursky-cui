@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Photographic panorama</title><link rel="stylesheet" href="/style.css"></head>
+<body><main><p class="eyebrow">PHOTOGRAPHIC STITCHING · SDR</p><h1>One scene.<br>Overlapping photographs.</h1>
+<p>Choose 2–6 JPEG or PNG photos taken by rotating the camera from roughly one position. Strong parallax may fail.</p>
+<form id="form"><label for="photos">Original photographs (12 MiB each, 32 MiB total)</label><input id="photos" type="file" accept="image/jpeg,image/png" multiple required><ul id="selected"></ul><button id="start" type="submit" disabled>Start cloud stitch</button></form>
+<p id="status" role="status" aria-live="polite">Checking configuration…</p><p id="job"></p>
+<section id="results" hidden><h2>Combined coverage</h2><img id="panorama" alt="Uncropped photographic panorama"><h2>Geometric coverage</h2><img id="coverage" alt="White pixels indicate coverage; black image content is still valid">
+<div id="cropControls" hidden><h2>Crop a copy</h2><p>Pixel coordinates in the uncropped panorama. Coverage is checked before export. Originals and uncropped output remain available.</p><div class="coordinates"><label>X<input id="x" type="number" min="0" value="0"></label><label>Y<input id="y" type="number" min="0" value="0"></label><label>Width<input id="w" type="number" min="1"></label><label>Height<input id="h" type="number" min="1"></label></div><button id="crop" type="button">Download covered crop</button><p id="cropStatus" role="status"></p></div>
+<h2>Downloads</h2><ul id="downloads"></ul></section><footer>Source scaffold. Cloud build and real-photo validation remain separate approval gates. No generated scenery, HDR, or lens-correction claims.</footer></main><script src="/app.js"></script></body></html>

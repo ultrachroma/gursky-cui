@@ -1,0 +1,46 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+app/data/
+results/
+input/
+output/
+
+.venv-app/
+.test_runs/
+
+cloud_build/.uv-cache/
+cloud_build/cli_state/
+
+.graph_client/
+
+# Source backup only: exclude generated media, archives and raw operational logs.
+*.log
+*.jsonl
+*.zip
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.tif
+*.tiff
+*.mp4
+*.mov
+
+# Retain concise build evidence; omit account snapshots and raw API responses.
+/cloud_build/*.json
+!/cloud_build/BUILD_RESULT.json
+!/cloud_build/UPLOAD_MANIFEST.json
+/cloud_build/staging/*
+!/cloud_build/staging/comfy-build.yaml
+
+# External dependency license copies stay local; notices/source references remain.
+/docs/licenses/
+
+# Local isolated editor/runtime and additional developer environments.
+.editor/
+.venv-editor/
+.venv-worker/
+.venv-app/
+release_candidate_*/

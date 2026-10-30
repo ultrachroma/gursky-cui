@@ -1,0 +1,6 @@
+# Intended isolated Linux cloud environment: Python 3.11/3.12.
+# OpenCV 4.12 requires numpy >=2,<2.3 on Python >=3.9.
+# Do not install another cv2 distribution in this environment.
+opencv-python-headless==4.12.0.88
+numpy==2.2.6
+Pillow==11.3.0

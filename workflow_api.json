@@ -1,0 +1,15 @@
+{
+  "1": {
+    "class_type": "PhotoPanorama",
+    "inputs": {
+      "photo_1": "",
+      "photo_2": "",
+      "photo_3": "",
+      "photo_4": "",
+      "photo_5": "",
+      "photo_6": "",
+      "crop": false
+    },
+    "_meta": {"title": "Photographic Panorama (SDR)"}
+  }
+}

@@ -1,0 +1,3 @@
+# SDK API contract reviewed against official 0.5 documentation and PyPI README.
+comfy-sdk==0.5.0
+Pillow==12.0.0

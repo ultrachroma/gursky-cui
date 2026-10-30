@@ -1,0 +1,138 @@
+{
+  "1": {
+    "class_type": "PanoramaOriginalPhoto",
+    "inputs": {
+      "image": ""
+    },
+    "_meta": {
+      "title": "Photo 1 — original bytes"
+    }
+  },
+  "2": {
+    "class_type": "PanoramaOriginalPhoto",
+    "inputs": {
+      "image": ""
+    },
+    "_meta": {
+      "title": "Photo 2 — original bytes"
+    }
+  },
+  "3": {
+    "class_type": "PanoramaOriginalPhoto",
+    "inputs": {
+      "image": ""
+    },
+    "_meta": {
+      "title": "Photo 3 — original bytes"
+    }
+  },
+  "4": {
+    "class_type": "PanoramaOriginalPhoto",
+    "inputs": {
+      "image": ""
+    },
+    "_meta": {
+      "title": "Photo 4 — original bytes"
+    }
+  },
+  "5": {
+    "class_type": "PanoramaOriginalPhoto",
+    "inputs": {
+      "image": ""
+    },
+    "_meta": {
+      "title": "Photo 5 — original bytes"
+    }
+  },
+  "6": {
+    "class_type": "PanoramaOriginalPhoto",
+    "inputs": {
+      "image": ""
+    },
+    "_meta": {
+      "title": "Photo 6 — original bytes"
+    }
+  },
+  "10": {
+    "class_type": "PanoramaCloudRun",
+    "inputs": {
+      "run_id": "",
+      "allow_new_run": false,
+      "photo_1": [
+        "1",
+        0
+      ],
+      "photo_2": [
+        "2",
+        0
+      ],
+      "photo_3": [
+        "3",
+        0
+      ],
+      "photo_4": [
+        "4",
+        0
+      ],
+      "photo_5": [
+        "5",
+        0
+      ],
+      "photo_6": [
+        "6",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Panorama — managed cloud execution"
+    }
+  },
+  "20": {
+    "class_type": "PreviewImage",
+    "inputs": {
+      "images": [
+        "10",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Panorama — uncropped preview"
+    }
+  },
+  "21": {
+    "class_type": "MaskToImage",
+    "inputs": {
+      "mask": [
+        "10",
+        1
+      ]
+    },
+    "_meta": {
+      "title": "Coverage display conversion"
+    }
+  },
+  "22": {
+    "class_type": "PreviewImage",
+    "inputs": {
+      "images": [
+        "21",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "Coverage — white = covered"
+    }
+  },
+  "23": {
+    "class_type": "PreviewAny",
+    "inputs": {
+      "source": [
+        "10",
+        2
+      ]
+    },
+    "_meta": {
+      "title": "Worker report — source hashes and diagnostics"
+    }
+  }
+}
